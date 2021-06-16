@@ -1,0 +1,31 @@
+<%- include('partials/header') -%>
+
+<% if (content.length<=0) { %>
+
+  <div class="mb-4 rounded-3" style="background-color: transparent; text-align: left;">
+    <div class="container-fluid">
+      <h1 class="display-5 fw-bold" style="margin-bottom: 1.5rem; color: tomato;">Bogle is empty!</h1>
+      <p class="col-md-8 fs-5">This may have happened bacause of server issue or no one has posted any blogs yet.</p>
+      <a href="/compose"><button class="btn btn-outline-primary btn-lg"  style="margin-top: 0rem;" type="button">Post a new blog</button></a>
+    </div>
+  </div>
+
+
+
+<%  } %>
+
+
+        <% for(let i=0;i<(content.length);i++){ %>
+        <div class="bg-transparent p-5 rounded" style="text-align: left;">
+            
+          <h1 style="color: rgb(162, 107, 226);font-family: Heebo, sans-serif;"><%= content[i].title %></h1>
+          <p class="lead" style="margin-bottom: 20px; font-size: 1rem; font-family: Heebo, sans-serif; max-width: 250px;"><%= (content[i].body).substring(0,150)+"..."%> <a href="/posts/<%= content[i].title %>" style="text-decoration: none; color: aqua;">Read more</a></p>
+          <hr>
+        </div>
+        <% } %>
+
+        
+
+
+
+<%- include('partials/footer') -%>

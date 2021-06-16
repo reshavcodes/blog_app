@@ -1,0 +1,15 @@
+<%- include('partials/header') -%>
+
+
+        <% for(let i=0;i<(content.length);i++){ %>
+        <div class="bg-transparent p-5 rounded" style="text-align: left;">
+            
+          <h1><%= content[i].title %></h1>
+          <p class="lead" style="margin-bottom: 20px; font-size: 1rem; font-family: 'Inter', sans-serif;"><%= (content[i].body).substring(0,200)+"..."%> <a href="/posts/<%= content[i].title %>" style="text-decoration: none; color: aqua;">Read more</a>   <a href="/hjekybcbcjymaecbejygf576 735865326v2xgbcb7ddh7268dn8/<%= i %>" style="text-decoration: none;color: tomato;">Delete</a></p>
+          <hr>
+        </div>
+        <% } %>
+
+
+
+<%- include('partials/footer') -%>

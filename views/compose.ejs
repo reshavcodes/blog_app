@@ -1,0 +1,34 @@
+<%- include("partials/header") -%>
+<form method="POST" action="/" target="/" style="text-align: left;">
+
+<% if(alert1==="yes"){  %>
+
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> You can't post an empty blog.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>  
+
+
+<% } %>
+
+<h2>Compose</h2><br>
+    <div class="mb-3">
+        
+        <input type="text" name="blog_title" class="form-control fw-bold" id="exampleFormControlInput1" placeholder="Title">
+      </div>
+      <div class="mb-3">
+        <!-- <label for="exampleFormControlTextarea1" class="form-label">Type your thoughts</label> -->
+        <textarea name="blog_text" class="form-control" id="exampleFormControlTextarea1" rows="4" style="margin-top: 45px;" placeholder="Type your thoughts"></textarea>
+    </div>
+    
+    <button class="btn btn-outline-light" type="submit" id="button-addon2">Post</button>
+ 
+
+  
+  </form>
+
+
+  <%- include("partials/footer") -%>
+
+
+  
